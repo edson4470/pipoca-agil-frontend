@@ -1,0 +1,922 @@
+
+/* =====================================
+   CONFIGURAÇÃO GERAL DA PÁGINA
+===================================== */
+
+.pagina-login {
+  min-height: 100vh;
+  background: #eef4ff;
+}
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.cabecalho {
+  height: 80px;
+  padding: 0 6%;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #123b84;
+}
+
+/* =====================================
+   ESTRUTURA PRINCIPAL
+===================================== */
+
+.conteudo-login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 50px 6%;
+}
+
+/* =====================================
+   LADO ESQUERDO - BOAS-VINDAS
+===================================== */
+
+.lado-esquerdo h1 {
+  font-size: clamp(32px, 3vw, 44px);
+  color: #102e68;
+}
+
+.lado-esquerdo p {
+  font-size: 18px;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+/* =====================================
+   IMAGEM DO CASAL DE IDOSOS
+===================================== */
+
+.espaco-imagem {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 550px;
+  height: 350px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  position: relative;
+}
+
+.imagem-idosos {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+/* =====================================
+   LADO DIREITO - FORMULÁRIO
+===================================== */
+
+.lado-direito {
+  display: flex;
+  justify-content: center;
+}
+
+.card-login {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+
+  background: white;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 35px
+    rgba(0, 0, 0, 0.08);
+}
+
+.card-login h2 {
+  font-size: 28px;
+  margin-top: 0;
+  color: #102e68;
+}
+
+.card-login > p {
+  color: #52627b;
+  line-height: 1.5;
+}
+
+/* =====================================
+   CAMPOS CPF E SENHA
+===================================== */
+
+.card-login label {
+  display: block;
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.card-login input {
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+
+  border: 1px solid #bdcbe0;
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+/* =====================================
+   RECUPERAÇÃO DE SENHA
+===================================== */
+
+.esqueci-senha {
+  display: block;
+  margin: 16px 0 24px auto;
+
+  border: none;
+  background: transparent;
+
+  color: #143b84;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* =====================================
+   BOTÕES DO FORMULÁRIO
+===================================== */
+
+.botao-entrar,
+.botao-cadastro {
+  width: 100%;
+  min-height: 48px;
+
+  border-radius: 8px;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.botao-entrar {
+  background: #123b92;
+  color: white;
+
+  border: none;
+  font-weight: bold;
+}
+
+.botao-cadastro {
+  margin-top: 16px;
+
+  background: white;
+  border: 1px solid #123b92;
+  color: #123b92;
+}
+
+/* =====================================
+   MENSAGENS DO SISTEMA
+===================================== */
+
+.mensagem {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+/* =====================================
+   RESPONSIVIDADE PARA CELULARES
+===================================== */
+
+@media (max-width: 768px) {
+
+  .conteudo-login {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .espaco-imagem {
+    height: 220px;
+    max-width: 100%;
+  }
+
+  .imagem-idosos {
+    object-fit: contain;
+  }
+
+  .card-login {
+    padding: 28px 22px;
+  }
+
+}
+
+/* =====================================
+   CARD MAIOR COM LEVE SOBREPOSIÇÃO
+   APENAS EM TELAS MAIORES
+===================================== */
+
+@media (min-width: 769px) {
+
+  .lado-esquerdo {
+    position: relative;
+    z-index: 1;
+  }
+
+  .lado-direito {
+    margin-left: -100px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-login {
+    max-width: 550px;
+    padding: 48px;
+  }
+
+}
+
+/* =====================================
+   TAMANHO DA IMAGEM EM TELAS MAIORES
+===================================== */
+
+@media (min-width: 769px) {
+
+  .espaco-imagem {
+    width: 100%;
+    max-width: none;
+    height: 480px;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    position: relative;
+    overflow: visible;
+  }
+
+  .imagem-idosos {
+    width: 135%;
+    max-width: none;
+    height: 100%;
+    flex-shrink: 0;
+
+    object-fit: contain;
+    object-position: left bottom;
+  }
+
+}
+
+/* =====================================
+   BOTÃO MOSTRAR / OCULTAR SENHA
+===================================== */
+
+.campo-senha {
+  position: relative;
+  width: 100%;
+}
+
+.campo-senha input {
+  width: 100%;
+  padding-right: 60px;
+}
+
+.botao-visualizar-senha {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #52627b;
+
+  cursor: pointer;
+}
+
+.botao-visualizar-senha:hover {
+  color: #123b92;
+  background: #eef4ff;
+}
+
+.botao-visualizar-senha:focus-visible {
+  outline: 2px solid #123b92;
+  outline-offset: 2px;
+}
+
+/* =====================================
+   ACESSIBILIDADE - CABEÇALHO
+===================================== */
+
+.cabecalho {
+  height: auto;
+  min-height: 80px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.controles-acessibilidade {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rotulo-acessibilidade {
+  font-size: 0.875em;
+  font-weight: bold;
+  color: #123b84;
+  margin-right: 6px;
+}
+
+.botao-acessibilidade {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+
+  background: white;
+  color: #123b84;
+
+  border: 1px solid #bdcbe0;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 0.875em;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.botao-acessibilidade:hover:not(:disabled) {
+  background: #e3edff;
+}
+
+.botao-acessibilidade:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.botao-contraste {
+  padding: 8px 14px;
+}
+
+/* =====================================
+   AUMENTAR E DIMINUIR LETRAS
+===================================== */
+
+.logo {
+  font-size: 1.625em;
+}
+
+.lado-esquerdo h1 {
+  font-size: 2em;
+}
+
+.lado-esquerdo p {
+  font-size: 1.125em;
+}
+
+.card-login h2 {
+  font-size: 1.75em;
+}
+
+.card-login input {
+  font-size: max(16px, 1em);
+}
+
+.botao-entrar,
+.botao-cadastro {
+  font-size: 1em;
+}
+
+.esqueci-senha,
+.mensagem {
+  font-size: 0.875em;
+}
+
+@media (min-width: 1200px) {
+  .lado-esquerdo h1 {
+    font-size: 2.6em;
+  }
+}
+
+/* =====================================
+   ALTO CONTRASTE
+===================================== */
+
+.pagina-login.alto-contraste {
+  background: #080808;
+  color: #ffffff;
+}
+
+.alto-contraste .cabecalho {
+  background: #080808;
+  border-bottom: 2px solid #ffff00;
+}
+
+.alto-contraste .logo,
+.alto-contraste .rotulo-acessibilidade,
+.alto-contraste .lado-esquerdo h1 {
+  color: #ffff00;
+}
+
+.alto-contraste .lado-esquerdo p {
+  color: #ffffff;
+}
+
+.alto-contraste .card-login {
+  background: #151515;
+  border: 2px solid #ffff00;
+}
+
+.alto-contraste .card-login h2 {
+  color: #ffff00;
+}
+
+.alto-contraste .card-login > p,
+.alto-contraste .card-login label {
+  color: #ffffff;
+}
+
+.alto-contraste .card-login input {
+  background: #080808;
+  color: #ffffff;
+  border: 2px solid #ffff00;
+}
+
+.alto-contraste .card-login input::placeholder {
+  color: #dddddd;
+}
+
+.alto-contraste .botao-entrar {
+  background: #ffff00;
+  color: #000000;
+  border: 2px solid #ffff00;
+}
+
+.alto-contraste .botao-cadastro {
+  background: #080808;
+  color: #ffff00;
+  border: 2px solid #ffff00;
+}
+
+.alto-contraste .esqueci-senha,
+.alto-contraste .botao-visualizar-senha {
+  color: #ffff00;
+}
+
+.alto-contraste .botao-acessibilidade {
+  background: #151515;
+  color: #ffff00;
+  border: 2px solid #ffff00;
+}
+
+.alto-contraste .botao-acessibilidade:hover:not(:disabled),
+.alto-contraste .botao-visualizar-senha:hover {
+  background: #303030;
+}
+
+.alto-contraste .mensagem {
+  color: #ffffff;
+}
+
+/* =====================================
+   FOCO VISÍVEL PARA TECLADO
+===================================== */
+
+.pagina-login button:focus-visible,
+.pagina-login input:focus-visible {
+  outline: 3px solid #2675d8;
+  outline-offset: 3px;
+}
+
+.alto-contraste button:focus-visible,
+.alto-contraste input:focus-visible {
+  outline-color: #ffff00;
+}
+
+/* =====================================
+   ACESSIBILIDADE EM TELAS PEQUENAS
+===================================== */
+
+@media (max-width: 768px) {
+
+  .cabecalho {
+    padding: 15px 20px;
+  }
+
+  .controles-acessibilidade {
+    justify-content: flex-start;
+  }
+
+  .rotulo-acessibilidade {
+    width: 100%;
+  }
+
+}
+
+/* =====================================
+   AJUSTE FINAL PARA MONITORES GRANDES
+   REFERÊNCIA: 1440 X 1024
+===================================== */
+
+@media (min-width: 1200px) {
+
+  .conteudo-login {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    grid-template-columns:
+      minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+    gap: 24px;
+  }
+
+  .lado-direito {
+    margin-left: -100px;
+    justify-content: center;
+  }
+
+  .card-login {
+    width: 100%;
+    max-width: 550px;
+  }
+
+}
+
+/* =====================================
+   AJUSTE FINAL DO CABEÇALHO
+   DESKTOP, TABLET E CELULAR
+===================================== */
+
+.cabecalho {
+  width: 100%;
+  min-height: 80px;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding: 12px clamp(20px, 6vw, 100px);
+  gap: 16px 28px;
+
+  background: #ffffff;
+}
+
+/* NOME DO SISTEMA */
+
+.logo {
+  flex-shrink: 0;
+  font-size: 1.625em;
+  font-weight: bold;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* GRUPO DE ACESSIBILIDADE */
+
+.controles-acessibilidade {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* TEXTO ACESSIBILIDADE */
+
+.rotulo-acessibilidade {
+  width: auto;
+  margin-right: 6px;
+
+  font-size: 0.875em;
+  font-weight: bold;
+}
+
+/* BOTÕES A- / A+ / CONTRASTE */
+
+.botao-acessibilidade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 44px;
+  min-height: 44px;
+
+  padding: 8px 12px;
+  font-size: 0.875em;
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+/* BOTÃO ALTO CONTRASTE */
+
+.botao-contraste {
+  padding: 8px 14px;
+}
+
+/* =====================================
+   AJUSTE PARA TELAS MENORES
+===================================== */
+
+@media (max-width: 700px) {
+
+  .cabecalho {
+    align-items: flex-start;
+    padding: 16px 20px;
+    gap: 14px;
+  }
+
+  .controles-acessibilidade {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+
+  .rotulo-acessibilidade {
+    width: auto;
+  }
+
+}
+
+/* =====================================
+   CELULARES MUITO ESTREITOS
+===================================== */
+
+@media (max-width: 390px) {
+
+  .rotulo-acessibilidade {
+    width: 100%;
+  }
+
+}
+
+/* =====================================
+   APROXIMAR LOGO E ACESSIBILIDADE
+===================================== */
+
+.cabecalho {
+  justify-content: center;
+  gap: clamp(30px, 8vw, 120px);
+}
+
+.controles-acessibilidade {
+  margin-left: 0;
+  justify-content: center;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 700px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .controles-acessibilidade {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =====================================
+   ALINHAMENTO DAS COLUNAS
+   CABEÇALHO E CONTEÚDO
+===================================== */
+
+.cabecalho {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  width: 100%;
+  min-height: 80px;
+  height: auto;
+
+  align-items: center;
+  justify-content: initial;
+  gap: 0;
+
+  padding: 12px max(20px, calc(50% - 430px));
+
+  background: #ffffff;
+}
+
+/* LOGO NA MESMA COLUNA DO BEM-VINDO */
+
+.logo {
+  justify-self: start;
+  margin: 0;
+}
+
+/* CONTROLES ALINHADOS AO FINAL DO CARD */
+
+.controles-acessibilidade {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: end;
+
+  gap: 8px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+/* MESMA LARGURA DO CABEÇALHO */
+
+.conteudo-login {
+  width: calc(100% - 40px);
+  max-width: 860px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  gap: 0;
+  padding: 50px 0;
+  align-items: center;
+}
+
+/* IMAGEM E TEXTO */
+
+.lado-esquerdo {
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* FORMULÁRIO SOBREPOSTO À IMAGEM */
+
+.lado-direito {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-left: -100px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.card-login {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* =====================================
+   RESPONSIVIDADE PARA CELULARES
+===================================== */
+
+@media (max-width: 768px) {
+
+  .cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    padding: 16px 20px;
+  }
+
+  .controles-acessibilidade {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .rotulo-acessibilidade {
+    width: auto;
+  }
+
+  .conteudo-login {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .lado-direito {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .card-login {
+    max-width: 480px;
+    padding: 28px 22px;
+  }
+
+}
+
+/* =====================================
+   VALIDAÇÃO DO CPF
+===================================== */
+
+.card-login input[aria-invalid="true"] {
+  border: 2px solid #c62828;
+}
+
+.erro-cpf {
+  color: #b42318;
+  font-size: 0.875em;
+  line-height: 1.4;
+  margin: 6px 0 10px;
+}
+
+/* ERRO NO MODO ALTO CONTRASTE */
+
+.alto-contraste .erro-cpf {
+  color: #ffff00;
+}
+
+.alto-contraste
+.card-login input[aria-invalid="true"] {
+  border: 2px solid #ffff00;
+}
+
+/* =====================================
+   SELETOR DA FORMA DE LOGIN
+===================================== */
+
+.linha-tipo-login {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+
+.seletor-login {
+  width: auto;
+  max-width: 100%;
+
+  padding: 4px 8px 4px 0;
+
+  border: none;
+  background: transparent;
+  color: #102e68;
+
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.seletor-login:focus-visible {
+  outline: 3px solid #2675d8;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* =====================================
+   VALIDAÇÃO DA IDENTIFICAÇÃO
+===================================== */
+
+.card-login input[aria-invalid="true"] {
+  border: 2px solid #c62828;
+}
+
+.erro-identificador {
+  margin: 6px 0 10px;
+  color: #b42318;
+  font-size: 0.875em;
+  line-height: 1.4;
+}
+
+/* =====================================
+   ALTO CONTRASTE
+===================================== */
+
+.alto-contraste .seletor-login {
+  color: #ffff00;
+  background: #151515;
+}
+
+.alto-contraste .erro-identificador {
+  color: #ffff00;
+}
+
+.alto-contraste .seletor-login:focus-visible {
+  outline-color: #ffff00;
+}
