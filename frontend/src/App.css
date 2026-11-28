@@ -1,11 +1,11 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap");
 /* =====================================
    CONFIGURAÇÃO GERAL DA PÁGINA
 ===================================== */
 
 .pagina-login {
   min-height: 100vh;
-  background: #eef4ff;
+  background: #e5edfa;
 }
 
 /* =====================================
@@ -919,4 +919,387 @@
 
 .alto-contraste .seletor-login:focus-visible {
   outline-color: #ffff00;
+}
+/* Logo e tamanho do cabeçalho */
+.cabecalho {
+  box-sizing: border-box;
+  width: 100%;
+  height: 96px;
+  min-height: 96px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.logo {
+  display: block;
+  width: 260px;
+  max-height: 72px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mantém o cabeçalho confortável em celulares */
+@media (max-width: 768px) {
+  .cabecalho {
+    height: auto;
+    min-height: 96px;
+    padding: 16px 20px;
+  }
+
+  .logo {
+    width: min(230px, 100%);
+    max-height: 58px;
+  }
+}.cabecalho {
+  box-sizing: border-box;
+  width: min(100%, 1440px);
+  height: 96px;
+  min-height: 96px;
+  margin: 0 auto;
+}/* Ajuste final do cabeçalho e da logo */
+.cabecalho {
+  box-sizing: border-box;
+  display: flex;
+  width: min(100%, 1440px);
+  height: 96px;
+  min-height: 96px;
+  margin: 0 auto;
+  padding: 0 32px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 24px;
+  background: #ffffff;
+}
+
+.logo {
+  display: block;
+  width: 260px;
+  max-height: 72px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.controles-acessibilidade {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.rotulo-acessibilidade {
+  width: auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+    width: 100%;
+    height: auto;
+    min-height: 96px;
+    margin: 0;
+    padding: 16px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .logo {
+    width: min(230px, 100%);
+    max-height: 58px;
+  }
+
+  .controles-acessibilidade {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}.cabecalho {
+  background: #e5edfa;
+}/* Alinha o conteúdo principal com a logo */
+.conteudo-login {
+  width: min(100%, 1440px);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+/* Escrita acima da foto conforme a referência da UX */
+.lado-esquerdo h1 {
+  max-width: 645px;
+  margin-top: 0;
+  color: #102d67;
+  font-family: "Nunito", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.lado-esquerdo h1 strong {
+  font-weight: 800;
+}
+
+.lado-esquerdo > p {
+  max-width: 645px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .conteudo-login {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .lado-esquerdo h1 {
+    font-size: clamp(38px, 8vw, 60px);
+  }
+}@media (min-width: 769px) {
+  .card-login {
+    box-sizing: border-box;
+    width: 609px;
+    max-width: 609px;
+    min-height: 779px;
+  }
+}.conteudo-cadastro {
+  box-sizing: border-box;
+  width: min(100%, 1440px);
+  min-height: calc(100vh - 96px);
+  margin: 0 auto;
+  padding: 32px;
+  color: #102d67;
+}
+
+.caminho-cadastro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+}
+
+.caminho-cadastro button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #102d67;
+  cursor: pointer;
+}
+
+.conteudo-cadastro > h1 {
+  margin: 0 0 4px;
+  color: #102d67;
+  font-size: 1.5em;
+}
+
+.descricao-cadastro {
+  margin: 0 0 24px;
+}
+
+.layout-cadastro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 394px;
+  align-items: center;
+  gap: 32px;
+}
+
+.card-cadastro {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 609px;
+  min-height: 0;
+  padding: 32px;
+}
+
+.etapas-cadastro {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: #52627b;
+  font-size: 0.9em;
+}
+
+.etapas-cadastro span {
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.etapas-cadastro .etapa-ativa {
+  background: #e5f4ec;
+  color: #176b43;
+  font-weight: 700;
+}
+
+.card-cadastro input[aria-invalid="true"] {
+  border: 2px solid #c62828;
+}
+
+.botoes-etapa {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.botoes-etapa .botao-entrar,
+.botoes-etapa .botao-cadastro {
+  width: auto;
+  min-width: 130px;
+  padding: 0 18px;
+}
+
+.resumo-cadastro {
+  margin: 18px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #f3f7fc;
+}
+
+.resumo-cadastro p {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.mostrar-senha-cadastro {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+.mostrar-senha-cadastro input {
+  width: 18px;
+  height: 18px;
+}
+
+.aviso-cadastro {
+  padding: 20px;
+  border: 1px solid #bdcbe0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 8%);
+}
+
+.aviso-cadastro h2 {
+  margin-top: 0;
+  font-size: 1.1em;
+}
+
+.aviso-cadastro p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .conteudo-cadastro {
+    padding: 24px 20px;
+  }
+
+  .layout-cadastro {
+    grid-template-columns: 1fr;
+  }
+
+  .card-cadastro {
+    padding: 24px 20px;
+  }
+
+  .botoes-etapa {
+    flex-direction: column;
+  }
+
+  .botoes-etapa .botao-entrar,
+  .botoes-etapa .botao-cadastro {
+    width: 100%;
+  }
+}
+.caminho-cadastro {
+  display: flex;
+  width: 194px;
+  height: 24px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  color: #102d67;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.caminho-cadastro button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}.conteudo-cadastro > h1 {
+  width: 466px;
+  max-width: 100%;
+  margin: 0 0 4px;
+  color: #102d67;
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.conteudo-cadastro > p {
+  width: max-content;
+  max-width: none;
+  margin: 0;
+
+  color: #102d67;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+/* Em telas estreitas, permite a quebra para não estourar a tela */
+@media (max-width: 600px) {
+  .conteudo-cadastro > p {
+    width: 100%;
+    max-width: 444px;
+    white-space: normal;
+  }
+}.apoio-cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.imagem-apoio-cadastro {
+  display: block;
+  width: min(303px, 100%);
+  height: 230px;
+  object-fit: contain;
+  position: relative;
+  top: -18px;
+}.apoio-cadastro {
+  position: relative;
+  display: block;
+}
+
+.imagem-apoio-cadastro {
+  position: absolute;
+  width: min(303px, 100%);
+  height: 230px;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: contain;
+  z-index: 1;
 }
